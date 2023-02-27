@@ -1,0 +1,4 @@
+Am folosit functia System.currentTimeMillis() pentru a putea salva in variabile timpul de start si finish al aplicatiei.
+Cu args.length am verificat daca in linia de comanda se introduce un parametru pentru aplicatie. In acest caz, salvez intr-o variabila de tip int parametrul pentru a putea crea matricea necesara. Intai am construit prima linie, iar pentrul restul valorilor am copiat valoarea din partea din stanga sus(i-1, (j+1) % n). In cazul in care j ajunge pe ultima coloana si depaseste valoarea n, valoarea de pe pozitia i-1, (j+1) % n va fi cea din prima coloana a liniei precedente.
+Pentru crearea matricii cu ajutorul unui string, pentru fiecare linie folosesc un string gol pe care il concatenez cu valorile matricii.
+La sfarsit, afisez diferenta dintre timpul final si timpul de start al rularii programului.
