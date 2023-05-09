@@ -1,0 +1,8 @@
+# Laboratorul nr. 10
+
+## Compulsory
+* Create the project ServerApplication. This will contain (at least) the classes: GameServer and ClientThread. (solved) (Am creat clasele *GameServer* si *ClientThread* care creeaza un server si ofera un management al clientelor pe post de socket-uri.)
+* Create the class GameServer. An instance of this class will create a ServerSocket running at a specified port. The server will receive requests (commands) from clients and it will execute them. (solved) (O instanta a clasei *GameServer* creeaza un *ServerSocket* care asteapta comenzi de la clientii care se conecteaza.)
+* Create the class ClientThread. An instance of this class will be responsible with communicating with a client Socket. If the server receives the command stop it will stop and will return to the client the respons "Server stopped", otherwise it return: "Server received the request ... ". (solved) (Clasa *ClientThread* comunica cu clientii prin initializarea unui socket pentru *in* and *out*. Daca acesta introduce comanda *stop*, serverul se opreste.)
+* Create the project ClientApplication. This will contain (at least) the class: GameClient. (solved) (Am creat proiectul ClientApplication care contine doar clasa *GameClient* ce se conecteaza la server.)
+* Create the class GameClient. An instance of this class will read commands from the keyboard and it will send them to the server. The client stops when it reads from the keyboard the string "exit". (solved) (O instanta a clasei *GameClient* scrie comenzi catre server. Acesta cand introduce comanda *exit*, clientul respectiv se opreste.)
