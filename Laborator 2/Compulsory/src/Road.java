@@ -1,3 +1,5 @@
+import static java.lang.System.exit;
+
 public class Road {
     private String name;
     private RoadType type;
@@ -6,13 +8,13 @@ public class Road {
     private int speedLimit;
     private double length;
 
-    public Road(String name, RoadType type, Location a, Location b, int speedLimit) {
+    public Road(String name, RoadType type, Location a, Location b, int speedLimit, double length) {
         setName(name);
         setType(type);
         setA(a);
         setB(b);
         setSpeedLimit(speedLimit);
-        setLength(a, b);
+        setLength(a, b, length);
     }
 
     public String getName() {
@@ -59,9 +61,15 @@ public class Road {
         return length;
     }
 
-    public void setLength(Location a, Location b) {
+    public void setLength(Location a, Location b, double length) {
         //Euclidean distance formula
         this.length = Math.sqrt(Math.pow(b.getY() - a.getY(), 2) + Math.pow(b.getX() - a.getX(), 2));
+        if(length < Math.sqrt(Math.pow(b.getY() - a.getY(), 2) + Math.pow(b.getX() - a.getX(), 2))) {
+            System.out.println("The length of the road '" + getName() + "' is less than the euclidian distance between these 2 locations.");
+            exit(1);
+        }
+        else
+            this.length = length;
     }
 
     @Override

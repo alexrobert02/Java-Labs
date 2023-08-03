@@ -13,7 +13,7 @@ public class SharedMemory {
             tokens.add(new Token(i));
         }
         // Shuffle the tokens in the list to randomize their order
-        //Collections.shuffle(tokens);
+        Collections.shuffle(tokens);
     }
 
     public synchronized Token extractToken() {

@@ -1,1 +1,1 @@
-{"documents":[{"id":1,"name":"My Article","pathOrUrl":"path/to/article","tags":{"Year":"2022","Author":"John Doe"}},{"id":2,"name":"My Book","pathOrUrl":"path/to/book","tags":{"Year":"2021","Author":"Jane Smith"}}]}
+{"documents":[{"id":1,"name":"My Article","pathOrUrl":"path/to/article","tags":{"Author":"John Doe","Year":"2022"}},{"id":2,"name":"My Book","pathOrUrl":"path/to/book","tags":{"Author":"Jane Smith","Year":"2021"}}]}

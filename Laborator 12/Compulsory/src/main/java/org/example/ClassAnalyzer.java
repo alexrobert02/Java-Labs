@@ -4,11 +4,13 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import org.testng.annotations.Test;
 
-public class ClassAnalyzer {
+// javac -cp "org/example/testng-7.7.0.jar" org/example/*.java
+// java -cp "org/example/testng-7.7.0.jar;" org.example.ClassAnalyzer "path/example"
 
+public class ClassAnalyzer {
     public static void main(String[] args) throws ClassNotFoundException {
         if (args.length < 1) {
-            System.out.println("Usage: JavaClassAnalyzer <classPath>");
+            System.out.println("Usage: ClassAnalyzer <classPath>");
             return;
         }
 

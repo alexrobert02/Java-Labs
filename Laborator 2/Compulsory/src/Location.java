@@ -2,6 +2,7 @@ public class Location {
     private String name;
     private double x;
     private double y;
+    private LocationType type;
 
     public Location() {
         x = 0;
@@ -9,8 +10,9 @@ public class Location {
         name = "";
     }
 
-    public Location(String name, double x, double y) {
+    public Location(String name, LocationType type, double x, double y) {
         setName(name);
+        setType(type);
         setX(x);
         setY(y);
     }
@@ -21,6 +23,14 @@ public class Location {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public LocationType getType() {
+        return type;
+    }
+
+    public void setType(LocationType type) {
+        this.type = type;
     }
 
     public double getX() {
@@ -41,6 +51,6 @@ public class Location {
 
     @Override
     public String toString() {
-        return "City name: " + getName() + ", " + "X: " + getX() + ", " + "Y: " + getY();
+        return "City name: " + getName() + ", " + "Location type: " + getType() + ", " + "X: " + getX() + ", " + "Y: " + getY();
     }
 }

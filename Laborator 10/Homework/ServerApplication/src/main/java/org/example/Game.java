@@ -21,7 +21,7 @@ class Game {
         currentPlayerIndex = 0;
         gameOver = false;
         gameStarted = false;
-        timeLimitSeconds = 10; // 60 seconds by default
+        timeLimitSeconds = 60; // 60 seconds by default
     }
 
     private boolean isPlayerTurn(Player player) {

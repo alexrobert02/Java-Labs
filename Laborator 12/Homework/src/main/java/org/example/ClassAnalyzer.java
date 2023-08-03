@@ -14,6 +14,9 @@ import java.util.List;
 
 import org.testng.annotations.Test;
 
+// javac -cp "org/example/testng-7.7.0.jar" org/example/*.java
+// java -cp "org/example/testng-7.7.0.jar;" org.example.ClassAnalyzer "path/example"
+
 public class ClassAnalyzer {
     private static int totalTests = 0;
     private static int passedTests = 0;
@@ -92,7 +95,7 @@ public class ClassAnalyzer {
     // Get the fully qualified class name from the file path
     private static String getClassName(String classPath, String filePath) {
         String separator = System.getProperty("file.separator");
-        String className = filePath.substring(classPath.length() + 1, filePath.length() - ".class".length());
+        String className = filePath.substring(classPath.length(), filePath.length() - ".class".length());
         return className.replace(separator, ".");
     }
 

@@ -12,20 +12,20 @@ drop sequence album_genre_seq;
 
 CREATE TABLE genres (
   id int primary key,
-  name varchar2(25)
+  name varchar2(100)
 );
 /
 
 CREATE TABLE artists (
   id int primary key,
-  name varchar2(25)
+  name varchar2(100)
 );
 /
 
 CREATE TABLE albums (
   id int not null primary key,
-  release_year varchar(25),
-  title varchar(25),
+  release_year int,
+  title varchar(100),
   artist_id int,
   genre_id int,
   CONSTRAINT FK_album_artist FOREIGN KEY (artist_id)

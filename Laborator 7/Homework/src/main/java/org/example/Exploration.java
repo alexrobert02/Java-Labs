@@ -63,7 +63,6 @@ public class Exploration implements Runnable {
             }
         }
         System.out.println("Robot " + robot.getName() + " finished exploration.");
-        System.out.println("Is the memory empty:" + memory.itsEmpty());
     }
 
     private int[] getStartingCell() {

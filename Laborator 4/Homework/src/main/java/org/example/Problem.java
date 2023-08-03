@@ -49,6 +49,7 @@ public class Problem {
         this.prefMap = prefMap;
     }
 
+
     public void greedy() {
         List<Student> students = new ArrayList<>(prefMap.keySet()); // List of students taken from the keySet of the prefMap
         students.sort(Comparator.comparingInt(s -> prefMap.get(s).size())); // Sort the list by number of preferences
